@@ -6,13 +6,13 @@
 Summary:	New symbols for a number of functions, operators and types
 Summary(pl.UTF-8):	Nowe symbole dla wielu funkcji, operatorów i typów
 Name:		ghc-%{pkgname}
-Version:	0.2.2.4
+Version:	0.2.4.2
 Release:	1
 License:	BSD
 Group:		Development/Languages
 #Source0Download: http://hackage.haskell.org/package/base-unicode-symbols
 Source0:	http://hackage.haskell.org/package/%{pkgname}-%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	7faf43a94a0082ee2fe7971fabd9be21
+# Source0-md5:	8f6bf2b5f9dd94d3d8913e770c3989d3
 URL:		http://hackage.haskell.org/package/base-unicode-symbols
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-base >= 3.0
@@ -143,51 +143,73 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE
 %{_libdir}/%{ghcdir}/package.conf.d/%{pkgname}.conf
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/HSbase-unicode-symbols-%{version}.o
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSbase-unicode-symbols-%{version}.a
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSbase-unicode-symbols-%{version}-*.so
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSbase-unicode-symbols-%{version}-*.a
+%exclude %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSbase-unicode-symbols-%{version}-*_p.a
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Applicative
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Applicative/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Applicative/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Applicative/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Arrow
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Arrow/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Arrow/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Arrow/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Category
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Category/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Category/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Category/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Monad
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Monad/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Monad/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Monad/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Bool
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Bool/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Bool/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Bool/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Eq
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Eq/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Eq/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Eq/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Foldable
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Foldable/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Foldable/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Foldable/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Function
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Function/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Function/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Function/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/List
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/List/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/List/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/List/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Monoid
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Monoid/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Monoid/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Monoid/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Ord
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Ord/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Ord/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Ord/*.dyn_hi
+%dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/String
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/String/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/String/*.dyn_hi
+%dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Numeric
+%dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Numeric/Natural
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Numeric/Natural/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Numeric/Natural/*.dyn_hi
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Prelude
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Prelude/Unicode.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Prelude/*.hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Prelude/*.dyn_hi
 
 %if %{with prof}
 %files prof
 %defattr(644,root,root,755)
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSbase-unicode-symbols-%{version}_p.a
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Applicative/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Arrow/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Category/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Monad/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Bool/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Eq/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Foldable/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Function/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/List/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Monoid/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Ord/Unicode.p_hi
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Prelude/Unicode.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/libHSbase-unicode-symbols-%{version}-*_p.a
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Applicative/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Arrow/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Category/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Control/Monad/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Bool/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Eq/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Foldable/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Function/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/List/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Monoid/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Ord/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/String/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Numeric/Natural/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Prelude/*.p_hi
 %endif
 
 %files doc
