@@ -7,7 +7,7 @@ Summary:	New symbols for a number of functions, operators and types
 Summary(pl.UTF-8):	Nowe symbole dla wielu funkcji, operatorów i typów
 Name:		ghc-%{pkgname}
 Version:	0.2.4.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 #Source0Download: http://hackage.haskell.org/package/base-unicode-symbols
